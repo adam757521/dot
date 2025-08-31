@@ -5,8 +5,12 @@ set $menu rofi -show drun
 
 output * bg $HOME/.config/sway/wallpapers/dragon.png fill
 
-default_border none
-default_floating_border none
+default_border pixel 2 
+default_floating_border normal 2 
+
+gaps inner 5
+gaps outer 2
+
 titlebar_padding 1
 titlebar_border_thickness 0
 
