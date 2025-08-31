@@ -1,0 +1,7 @@
+date=$(date +'%Y-%m-%d %H:%M:%S')
+power=$(sensors | grep "System Power" | awk '{print $4}')
+powerw="${power} W"
+bat=$(cat /sys/class/power_supply/macsmc-battery/capacity)
+cap="${bat}%"
+
+echo $cap "|" $powerw "|" $date
